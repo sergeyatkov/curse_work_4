@@ -2,7 +2,7 @@ import requests
 from any_parser import Parser
 
 
-class HHApi(Parser):
+class HhParser(Parser):
     """
     Класс для работы с API HeadHunter
     """
