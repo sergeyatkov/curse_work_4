@@ -8,7 +8,7 @@ class Saver(ABC):
     """
 
     @abstractmethod
-    def insert(self):
+    def insert(self, data):
         pass
 
     @abstractmethod

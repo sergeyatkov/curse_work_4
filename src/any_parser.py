@@ -8,5 +8,5 @@ class Parser(ABC):
     """
 
     @abstractmethod
-    def load_vacancies(self, keyword):
+    def load_vacancies(self, keyword: str):
         pass
