@@ -56,3 +56,31 @@ class Vacancy:
         if self.to_salary is None or other.to_salary is None:
             return False
         return self.to_salary == other.to_salary
+
+    @staticmethod
+    def weed_on_salary(range_salary: str, vacancies: list) -> list:
+        """
+        Метод выводит упорядоченный список вакансий
+        :param vacancies: список вакансий
+        :param range_salary: диапазон зарплат
+        :return: упорядоченный список вакансий
+        """
+        str_from_salary, str_to_salary = range_salary.split("-")
+        from_salary = int(str_from_salary)
+        to_salary = int(str_to_salary)
+
+        ordered_vacancies = []
+
+        for vacancy in vacancies:
+            if vacancy.from_salary is not None and vacancy.to_salary is not None:
+                if from_salary <= vacancy.from_salary <= to_salary or \
+                        from_salary <= vacancy.to_salary <= to_salary:
+                    ordered_vacancies.append(vacancy)
+            elif vacancy.from_salary is not None:
+                if from_salary <= vacancy.from_salary <= to_salary:
+                    ordered_vacancies.append(vacancy)
+            elif vacancy.to_salary is not None:
+                if from_salary <= vacancy.to_salary <= to_salary:
+                    ordered_vacancies.append(vacancy)
+
+        return ordered_vacancies
