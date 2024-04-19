@@ -22,7 +22,7 @@ class Vacancy:
         данных о вакансии
         :return: данные о вакансии в строковом формате.
         """
-        return (f"Название: {self.name}\n"
+        return (f"\n\nНазвание: {self.name}\n"
                 f"Оплата: от {self.from_salary} до {self.to_salary}\n"
                 f"Требования: {self.requirements}\n"
                 f"Должностные обязанности: {self.responsibility}")

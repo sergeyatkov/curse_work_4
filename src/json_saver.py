@@ -21,7 +21,7 @@ class JsonSaver(Saver):
 
             vacancies_data = {
                 "name": vacancy["name"],
-                "URL": vacancy["url"],
+                "link": vacancy["url"],
                 "to_salary": to_salary,
                 "from_salary": from_salary,
                 "requirements": vacancy["snippet"]["requirement"],
