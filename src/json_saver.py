@@ -1,5 +1,5 @@
 import json
-from any_saver import Saver
+from src.any_saver import Saver
 
 
 class JsonSaver(Saver):
@@ -10,7 +10,7 @@ class JsonSaver(Saver):
     def __init__(self):
         self.filename = "vacancies.json"
 
-    def insert(self, vacancies):
+    def insert(self, vacancies: dict) -> None:
         data = []
 
         for vacancy in vacancies:
