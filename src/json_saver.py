@@ -32,7 +32,7 @@ class JsonSaver(Saver):
         with open(self.filename, "w", encoding="utf-8") as file:
             json.dump(data, file, ensure_ascii=False, indent=4)
 
-    def select(self):
+    def select(self) -> list:
         """
                 Метод обрабатывает JSON файл.
                 :return: Список объектов Vacancy

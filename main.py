@@ -20,11 +20,8 @@ def user_interaction():
 
     ordered_vacancies = Vacancy.weed_on_salary(range_salary, vacancies)
 
-    for vacancy in ordered_vacancies:
+    for vacancy in ordered_vacancies[:number_of_vacancies]:
         print(vacancy)
-        number_of_vacancies -= 1
-        if number_of_vacancies == 0:
-            break
 
 
 if __name__ == "__main__":
