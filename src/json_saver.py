@@ -1,5 +1,7 @@
 import json
 from src.any_saver import Saver
+from src.vacancy import Vacancy
+from utils.convert_to_object import convert_to_object
 
 
 class JsonSaver(Saver):
@@ -31,7 +33,14 @@ class JsonSaver(Saver):
             json.dump(data, file, ensure_ascii=False, indent=4)
 
     def select(self):
-        pass
+        """
+                Метод обрабатывает JSON файл.
+                :return: Список объектов Vacancy
+                """
+        with open(self.filename, "r", encoding="utf-8") as file:
+            data = json.load(file)
+            vacancies = convert_to_object(data)
+            return vacancies
 
     def delete(self):
         pass
