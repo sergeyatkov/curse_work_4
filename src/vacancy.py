@@ -16,7 +16,7 @@ class Vacancy:
         self.requirements = requirements
         self.responsibility = responsibility
 
-    def __str__(self):
+    def __str__(self) -> str:
         """
         Метод для понятного пользователю вывода
         данных о вакансии
