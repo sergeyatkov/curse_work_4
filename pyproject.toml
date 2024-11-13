@@ -6,10 +6,10 @@ authors = ["sergey <bersercwow@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "3.11.9"
+python = "3.11.10"
 pytest = "^8.1.1"
-coverage = "^7.4.4"
-requests = "^2.31.0"
+coverage = "^7.6.4"
+requests = "^2.32.3"
 
 
 [build-system]
